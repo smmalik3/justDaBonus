@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}Just Da Bonus{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  <div class="page-header">
+    <h1>Just Da Bonus</h1>
+  </div>
+  <div class="row">
+  <div class="col-xs-12 col-md-8">
+  <p class="lead">Now's your chance to give that special Signalite recognition just from you.</p>
+  <form>
+    <div class="form-group">
+      <label for="name">Select Bonus Recipient</label>
+      <div id="the-basics">
+        <input class="typeahead" type="text" placeholder="States of USA">
+      </div>
+      <input type="text" data-provide="typeahead" data-source={{name}} class="form-control" id="bonusPerson" placeholder="Start typing to populate names.">
+    </div>
+    <div class="form-group">
+      <label for="reason">Why does this person deserve a Unicorn?</label>
+      <textarea class="form-control" rows="5"></textarea>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg">Send Bonus</button>
+  </form>
+  <br><br>
+  <p class="lead">Don't see who you are looking for in the list? They must be new, you can add them below. (Please use only their full proper name.)</p>
+  <div class="form-group">
+    <label for="newUser">New Bonus Recipient's Full Name</label>
+    <input type="text" class="form-control" id="newBonusUser" placeholder="Please Enter Full Name">
+  </div>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <p class="lead">Bonus Feed</p>
+  </div>
+ </div>
+</div>
+
+{% endblock %}
